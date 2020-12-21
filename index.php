@@ -28,7 +28,7 @@
 
         $xmlDoc = new DOMDocument();
         $xmlDoc -> load("Uploads/test.xml" , LIBXML_NOENT | LIBXML_DTDLOAD);
-        // LIBXML_NOENT : enables the substitution of XML character entity references, external or not.
+        
         $xmlList = simplexml_import_dom($xmlDoc);
         foreach ($xmlList -> student as $student) {
             echo "<tr><td>{$student->name}</td><td>{$student->age}</td><td>{$student->school}</td></tr>";
